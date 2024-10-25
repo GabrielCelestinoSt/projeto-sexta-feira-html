@@ -1187,13 +1187,6 @@ color: var(--nav-color2);
   font-size: 14px;
 }
 
-.contato .email-form {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  height: 100%;
-  padding: 30px;
-}
-
 @media (max-width: 575px) {
   .contato .email-form {
     padding: 20px;
@@ -1212,6 +1205,13 @@ color: var(--nav-color2);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
+.contato .email-form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 30px;
+}
+
 .contato .email-form input[type=text]:focus,
 .contato .email-form input[type=email]:focus,
 .contato .email-form textarea:focus {
@@ -1225,7 +1225,7 @@ color: var(--nav-color2);
 }
 
 .contato .email-form button[type=submit] {
-  color: var(--contrast-color);
+  color: whitesmoke;
   background: var(--accent-color);
   border: 0;
   padding: 10px 30px;
