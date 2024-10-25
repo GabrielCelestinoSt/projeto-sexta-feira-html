@@ -365,9 +365,9 @@ a {
   align-items: center;
 }
 
-.hero .carousel-indicators{
+.hero .carousel-indicators li{
   cursor: pointer;
-  background: #9c9c9c;
+  background: #e4e0e0d8;
   width: 12px;
   height: 12px;
   opacity: 1;
@@ -377,7 +377,7 @@ a {
   transition: 0.3s;
 }
 
-.hero .carousel-indicators.active{
+.hero .carousel-indicators li.active{
   opacity: 1;
   background: red;
 }
@@ -451,7 +451,7 @@ a {
 /* global sections */
  section, 
  .section{
-  color: ;
+/*   color: ; */
   background: var(--background-color);
   padding: 60px 0;
  }
@@ -1048,4 +1048,191 @@ color: var(--nav-color2);
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(810deg); /* antes era 90 */
   color: whitesmoke;
+}
+
+/* responsividade carrossel */
+
+@media (max-height: 500px),(max-width:500px){
+  .hero .carousel{
+    min-height:100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h2{
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero .carousel-control-prev{
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero .carousel-control-next{
+    padding-right: 15px;
+  }
+}
+
+/* fim responsividade carrossel */
+
+
+
+/* medicos section */
+
+.medicos .team-member {
+  background-color: whitesmoke;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  text-align: center;
+}
+
+.medicos .team-member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.medicos .team-member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+
+.medicos .team-member .social a {
+  background: color-mix(in srgb, var(--contrast-color), transparent 25%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0 3px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  transition: ease-in-out 0.3s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffffc4;
+}
+
+.medicos .team-member .social a:hover {
+  color: whitesmoke;
+  background: black;
+/*   padding: 30px; */
+}
+
+.medicos .team-member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.medicos .team-member .member-info {
+  padding: 25px 15px;
+}
+
+.medicos .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.medicos .team-member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.medicos .team-member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}
+
+/*Contato Section*/
+.contato .info-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px 0 30px 0;
+}
+
+.contato .info-item i {
+  color: var(--accent-color);
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.contato .info-item h3 {
+  font-size: 20px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contato .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.contato .email-form {
+  background-color: var(--surface-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 30px;
+}
+
+@media (max-width: 575px) {
+  .contato .email-form {
+    padding: 20px;
+  }
+}
+
+.contato .email-form input[type=text],
+.contato .email-form input[type=email],
+.contato .email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.contato .email-form input[type=text]:focus,
+.contato .email-form input[type=email]:focus,
+.contato .email-form textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.contato .email-form input[type=text]::placeholder,
+.contato .email-form input[type=email]::placeholder,
+.contato .email-form textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.contato .email-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contato .email-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
